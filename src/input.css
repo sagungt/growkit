@@ -32,4 +32,13 @@
   .gradient-primary {
     @apply bg-gradient-to-tr from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D];
   }
+  button.active {
+    @apply bg-dark;
+  }
+  .available {
+    @apply before:content-[url('../assets/img/Checkmark.svg')] before:mr-2;
+  }
+  .unavailable {
+    @apply before:content-[url('../assets/img/Close.svg')] before:mr-2;
+  }
 }
