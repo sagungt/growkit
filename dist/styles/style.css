@@ -1090,6 +1090,10 @@ button.active {
   background-size: cover;
 }
 
+.bg-fixed {
+  background-attachment: fixed;
+}
+
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
