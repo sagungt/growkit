@@ -18,7 +18,7 @@
   <nav id="navbar" class="fixed z-[9999] w-full dark:bg-dark transition-all">
     <div class="container flex items-center justify-between flex-wrap py-3">
 
-      <div class="logo-box">
+      <div class="logo-box lg:w-[40%]add">
         <a href="#" class="flex items-center">
           <span class="text-whiteText italic font-extrabold text-[22px] leading-[22px]">GrowKit</span>
         </a>
@@ -78,7 +78,7 @@
 
         <h1 class="font-extrabold text-[64px] bg-clip-text gradient-primary text-transparent md:text-whiteText lg:text-whiteText">Build your business with GrowKit</h1>
 
-        <p class="text-whiteText/90 font-light text-[22px] leading-[64px] text-left">GrowKit is a flexible, easy-to-use template that will scale with your business. 33+ pre-build and customizable sections for product pages, pricing pages, landing pages, and more.</p>
+        <p class="text-whiteText/90 font-light text-[22px] leading-[100%] text-left">GrowKit is a flexible, easy-to-use template that will scale with your business. 33+ pre-build and customizable sections for product pages, pricing pages, landing pages, and more.</p>
 
         <div class="flex gap-8 justify-center">
 
@@ -233,10 +233,10 @@
               <div class="w-8 h-8 bg-[#1D8AF7] flex items-center justify-center rounded-full">
                 <img src="./assets/img/Star.svg" alt="Star">
               </div>
-              <span class="font-extrabold leading-4 uppercase">BASIC</span>
+              <span class="font-extrabold leading-4 uppercase">PLUS</span>
             </div>
-            <span class="font-extrabold text-[28px] block"><span class="text-[56px]">$28</span>/mo</span>
-            <span class="font-bold text-[14px] text-whiteText/90">or $280 annually</span>
+            <span class="font-extrabold text-[28px] block"><span class="text-[56px]">$35</span>/mo</span>
+            <span class="font-bold text-[14px] text-whiteText/90">or $350 annually</span>
           </div>
           <ul class="space-y-8">
             <li class="flex items-center"><span class="text-[18px] font-light text-whiteText available">Subscription Feature</span></li>
@@ -256,10 +256,10 @@
               <div class="w-8 h-8 bg-[#1D8AF7] flex items-center justify-center rounded-full">
                 <img src="./assets/img/Star.svg" alt="Star">
               </div>
-              <span class="font-extrabold leading-4 uppercase">BASIC</span>
+              <span class="font-extrabold leading-4 uppercase">PREMIUM</span>
             </div>
-            <span class="font-extrabold text-[28px] block"><span class="text-[56px]">$28</span>/mo</span>
-            <span class="font-bold text-[14px] text-whiteText/90">or $280 annually</span>
+            <span class="font-extrabold text-[28px] block"><span class="text-[56px]">$49</span>/mo</span>
+            <span class="font-bold text-[14px] text-whiteText/90">or $490 annually</span>
           </div>
           <ul class="space-y-8">
             <li class="flex items-center"><span class="text-[18px] font-light text-whiteText available">Subscription Feature</span></li>
@@ -329,8 +329,8 @@
     <div class="container">
 
       <div class="bg-darkSecondary rounded-2xl">
-        <div class="flex justify-between p-16">
-          <div class="w-[70%]">
+        <div class="flex justify-between p-16 items-center">
+          <div class="w-[70%] space-y-2">
             <h2 class="font-extrabold text-[44px] leading-[44px] text-whiteText">Stay updated with the latest news!</h2>
             <p class="font-light text-[18px] text-whiteText/90">Get all the latest updates, special offers, premium content and more when you subscribe. Don’t worry, we’re not interested in sending any junk.</p>
           </div>
@@ -341,10 +341,80 @@
     </div>
   </section>
 
-  <footer id="footer">
-    <div class="container">
+  <footer id="footer" class="bg-dark py-8">
+    <div class="container text-center flex-col items-center flex justify-center w-full gap-y-4">
 
+      <a href="#" class="flex items-center">
+        <h2 class="text-whiteText italic font-extrabold text-[48px] leading-[22px] mb-[30px]">GrowKit</h2>
+      </a>
 
+      <ul class="flex mb-4 text-whiteText">
+        <li>
+          <a class="px-2.5 py-3 font-bold" href="#">Home</a>
+        </li>
+        <li>
+          <a class="px-2.5 py-3 font-bold" href="#">Customers</a>
+        </li>
+        <li>
+          <a class="px-2.5 py-3 font-bold" href="#">Features</a>
+        </li>
+        <li>
+          <a class="px-2.5 py-3 font-bold" href="#">Pricing</a>
+        </li>
+        <li>
+          <a class="px-2.5 py-3 font-bold" href="#">Get Started</a>
+        </li>
+      </ul>
+
+      <div class="flex justify-between text-[18px] font-light text-whiteText w-full">
+        <div>
+          <span>Powered by <span class="font-bold">Webflow</span>, built by <span class="font-bold">Abel Hancock</span> | <span class="font-bold">Licensing</span></span>
+        </div>
+        <div class="flex gap-2">
+          <a href="#">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.08479 22.221V11.3399H10.0884L10.4865 7.59026H7.08479L7.0899 5.71351C7.0899 4.73554 7.18282 4.21152 8.58747 4.21152H10.4652V0.461426H7.46115C3.85278 0.461426 2.58272 2.28042 2.58272 5.3394V7.59069H0.333496V11.3404H2.58272V22.221H7.08479Z" fill="#F7FAFC"/>
+              </svg>              
+            </div>
+          </a>
+          <a href="#">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666504 2.77423C0.666504 2.77423 8.7161 7.33895 10.2785 7.33895C11.9161 7.33895 19.8785 2.86143 19.8785 2.86143L19.8913 2.06143C19.8913 1.17823 19.1745 0.461426 18.2889 0.461426H2.2681C1.3833 0.461426 0.666504 1.17823 0.666504 2.06143V2.77423ZM10.2785 9.53921C11.9913 9.53921 19.8785 5.26169 19.8785 5.26169L19.8913 14.8617C19.8913 15.7449 19.1745 16.4617 18.2889 16.4617H2.2681C1.3841 16.4617 0.666504 15.7449 0.666504 14.8617L0.679304 5.26169C0.678504 5.26169 8.7161 9.53921 10.2785 9.53921Z" fill="#F7FAFC"/>
+              </svg>              
+            </div>
+          </a>
+          <a href="#">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3348 0.585704C20.2528 0.837591 20.9757 1.57977 21.221 2.52228C21.6668 4.23046 21.6668 7.7946 21.6668 7.7946C21.6668 7.7946 21.6668 11.3586 21.221 13.0669C20.9757 14.0094 20.2528 14.7516 19.3348 15.0036C17.6713 15.4613 11.0002 15.4613 11.0002 15.4613C11.0002 15.4613 4.32901 15.4613 2.66537 15.0036C1.74744 14.7516 1.02453 14.0094 0.779193 13.0669C0.333496 11.3586 0.333496 7.7946 0.333496 7.7946C0.333496 7.7946 0.333496 4.23046 0.779193 2.52228C1.02453 1.57977 1.74744 0.837591 2.66537 0.585704C4.32901 0.12793 11.0002 0.12793 11.0002 0.12793C11.0002 0.12793 17.6713 0.12793 19.3348 0.585704ZM9.00016 11.4613V4.7946L14.3335 8.12806L9.00016 11.4613Z" fill="#F7FAFC"/>
+              </svg>              
+            </div>
+          </a>
+          <a href="#">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0012 0.794922C8.10424 0.794922 7.74068 0.807589 6.60289 0.859367C5.46733 0.911367 4.69221 1.09115 4.01398 1.35493C3.31242 1.62737 2.7173 1.99182 2.1244 2.58494C1.53106 3.17784 1.16662 3.77295 0.89328 4.47429C0.628833 5.15274 0.448831 5.92809 0.397719 7.06321C0.346829 8.201 0.333496 8.56478 0.333496 11.4617C0.333496 14.3586 0.346385 14.7211 0.397942 15.8589C0.450164 16.9944 0.629944 17.7695 0.893502 18.4478C1.16617 19.1493 1.53062 19.7444 2.12374 20.3373C2.71641 20.9307 3.31153 21.296 4.01264 21.5685C4.69132 21.8322 5.46666 22.012 6.60201 22.064C7.73979 22.1158 8.10313 22.1285 10.9998 22.1285C13.897 22.1285 14.2594 22.1158 15.3972 22.064C16.5328 22.012 17.3088 21.8322 17.9875 21.5685C18.6888 21.296 19.283 20.9307 19.8757 20.3373C20.469 19.7444 20.8335 19.1493 21.1068 18.448C21.369 17.7695 21.549 16.9942 21.6024 15.8591C21.6535 14.7213 21.6668 14.3586 21.6668 11.4617C21.6668 8.56478 21.6535 8.20122 21.6024 7.06343C21.549 5.92786 21.369 5.15275 21.1068 4.47452C20.8335 3.77295 20.469 3.17784 19.8757 2.58494C19.2824 1.9916 18.689 1.62715 17.9868 1.35493C17.3068 1.09115 16.5312 0.911367 15.3957 0.859367C14.2579 0.807589 13.8956 0.794922 10.9978 0.794922H11.0012ZM10.6456 2.71676C10.4299 2.71666 10.23 2.71657 10.0442 2.71686V2.71419C8.05617 2.71642 7.67483 2.72975 6.69082 2.77419C5.65081 2.82197 5.08614 2.99531 4.71013 3.14198C4.21235 3.33576 3.85679 3.56687 3.48345 3.94021C3.11012 4.31354 2.87856 4.6691 2.68522 5.16689C2.53922 5.54289 2.36544 6.10734 2.31788 7.14735C2.26677 8.27181 2.25655 8.60781 2.25655 11.4563C2.25655 14.3048 2.26677 14.6425 2.31788 15.767C2.36522 16.807 2.53922 17.3715 2.68522 17.747C2.879 18.245 3.11012 18.5997 3.48345 18.973C3.85679 19.3464 4.21235 19.5775 4.71013 19.7708C5.08636 19.9168 5.65081 20.0906 6.69082 20.1386C7.81527 20.1897 8.15283 20.2008 11.0011 20.2008C13.8491 20.2008 14.1869 20.1897 15.3114 20.1386C16.3514 20.091 16.9163 19.9177 17.2918 19.771C17.7898 19.5777 18.1443 19.3466 18.5176 18.9733C18.8909 18.6001 19.1225 18.2457 19.3158 17.7479C19.4618 17.3723 19.6356 16.8079 19.6832 15.7679C19.7343 14.6434 19.7454 14.3056 19.7454 11.459C19.7454 8.61226 19.7343 8.27447 19.6832 7.15002C19.6358 6.11001 19.4618 5.54556 19.3158 5.17C19.1221 4.67221 18.8909 4.31665 18.5176 3.94332C18.1445 3.56998 17.7896 3.33887 17.2918 3.14553C16.9158 2.99953 16.3514 2.82575 15.3114 2.77819C14.1867 2.72708 13.8491 2.71686 11.0011 2.71686L10.6456 2.71676ZM15.415 5.76752C15.415 5.06062 15.9883 4.48795 16.695 4.48795V4.4875C17.4017 4.4875 17.975 5.06084 17.975 5.76752C17.975 6.47419 17.4017 7.04753 16.695 7.04753C15.9883 7.04753 15.415 6.47419 15.415 5.76752ZM11.0008 5.98348C7.97571 5.98359 5.52314 8.43624 5.52314 11.4613C5.52314 14.4865 7.97583 16.938 11.001 16.938C14.0261 16.938 16.4779 14.4865 16.4779 11.4613C16.4779 8.43617 14.0259 5.98348 11.0008 5.98348ZM11.0012 7.90592C12.9648 7.90592 14.5568 9.49772 14.5568 11.4615C14.5568 13.4251 12.9648 15.0171 11.0012 15.0171C9.03739 15.0171 7.4456 13.4251 7.4456 11.4615C7.4456 9.49772 9.03739 7.90592 11.0012 7.90592Z" fill="#F7FAFC"/>
+              </svg>              
+            </div>
+          </a>
+          <a href="#">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.401 4.71768L9.44297 5.40972L8.74349 5.32498C6.19739 5.00014 3.97304 3.89852 2.08445 2.04836L1.16114 1.13034L0.923313 1.80826C0.419687 3.31946 0.741448 4.9154 1.79067 5.98878C2.35025 6.58196 2.22434 6.6667 1.25906 6.31362C0.923312 6.20063 0.629531 6.11589 0.601552 6.15826C0.503625 6.25712 0.839375 7.54235 1.10518 8.05079C1.46891 8.75696 2.21035 9.44901 3.02175 9.85858L3.70724 10.1834L2.89584 10.1975C2.11243 10.1975 2.08445 10.2117 2.16839 10.5083C2.44818 11.4263 3.55336 12.4008 4.78444 12.8245L5.65179 13.1211L4.89635 13.573C3.77719 14.2227 2.46217 14.5899 1.14715 14.6182C0.517614 14.6323 0 14.6888 0 14.7311C0 14.8724 1.70673 15.6633 2.69999 15.974C5.67977 16.892 9.21914 16.4966 11.8772 14.9289C13.7658 13.8131 15.6543 11.5958 16.5357 9.44901C17.0113 8.30501 17.487 6.21475 17.487 5.21199C17.487 4.56232 17.529 4.47758 18.3124 3.70079C18.774 3.24885 19.2077 2.75453 19.2916 2.61329C19.4315 2.34495 19.4175 2.34495 18.7041 2.58505C17.515 3.00875 17.3471 2.95226 17.9346 2.3167C18.3683 1.86476 18.8859 1.0456 18.8859 0.805503C18.8859 0.763133 18.6761 0.83375 18.4383 0.96086C18.1865 1.10209 17.6269 1.31394 17.2072 1.44105L16.4518 1.68115L15.7663 1.21508C15.3885 0.96086 14.8569 0.678392 14.5771 0.593653C13.8637 0.395925 12.7725 0.424171 12.129 0.650145C10.3803 1.2857 9.27509 2.92401 9.401 4.71768Z" fill="#F7FAFC"/>
+              </svg>              
+            </div>
+          </a>
+          <a href="#">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.9999 0.461426C5.37269 0.461426 0 5.8341 0 12.4615C0 19.0892 5.37269 24.4614 11.9999 24.4614C18.6279 24.4614 24 19.0892 24 12.4615C24 5.83453 18.6279 0.461999 11.9998 0.461999L11.9999 0.461426ZM17.503 17.769C17.2881 18.1215 16.8267 18.2333 16.4742 18.0169C13.6567 16.2959 10.1099 15.9061 5.93283 16.8605C5.53032 16.9522 5.12909 16.7 5.03738 16.2973C4.94524 15.8946 5.19644 15.4934 5.59996 15.4017C10.1711 14.3569 14.092 14.807 17.2551 16.7401C17.6076 16.9565 17.7194 17.4165 17.503 17.769ZM18.9718 14.5011C18.701 14.9417 18.1249 15.0807 17.685 14.8099C14.4594 12.8268 9.54257 12.2526 5.72735 13.4107C5.23255 13.5602 4.70995 13.2813 4.55978 12.7874C4.41075 12.2925 4.68975 11.7709 5.18369 11.6205C9.54171 10.2981 14.9595 10.9387 18.6637 13.215C19.1036 13.4858 19.2426 14.0618 18.9718 14.5012V14.5011ZM19.0979 11.0986C15.2304 8.80138 8.84945 8.59015 5.15689 9.71089C4.56394 9.89073 3.93688 9.55598 3.75719 8.96302C3.5775 8.36976 3.91195 7.74312 4.50533 7.56285C8.74413 6.27603 15.7906 6.52466 20.2434 9.16808C20.7779 9.48462 20.9527 10.1735 20.636 10.7061C20.3208 11.2395 19.6301 11.4153 19.0985 11.0986H19.0979Z" fill="#F7FAFC"/>
+              </svg>              
+            </div>
+          </a>
+        </div>
+      </div>
 
     </div>
   </footer>

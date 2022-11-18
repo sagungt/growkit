@@ -732,6 +732,14 @@ button.active {
   margin-right: 42px;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+
 .block {
   display: block;
 }
@@ -771,6 +779,10 @@ button.active {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .w-full {
@@ -842,12 +854,32 @@ button.active {
   width: 70%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
 
+.flex-auto {
+  flex: 1 1 auto;
+}
+
 .basis-full {
   flex-basis: 100%;
+}
+
+.basis-1 {
+  flex-basis: 0.25rem;
 }
 
 .cursor-pointer {
@@ -906,6 +938,10 @@ button.active {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-y-5 {
   row-gap: 1.25rem;
 }
@@ -934,6 +970,10 @@ button.active {
 
 .gap-y-20 {
   row-gap: 5rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .space-y-\[28px\] > :not([hidden]) ~ :not([hidden]) {
@@ -1135,6 +1175,21 @@ button.active {
   padding-bottom: 0.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1149,6 +1204,10 @@ button.active {
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pb-\[30px\] {
+  padding-bottom: 30px;
 }
 
 .text-left {
@@ -1206,6 +1265,10 @@ button.active {
   font-size: 14px;
 }
 
+.text-\[48px\] {
+  font-size: 48px;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
@@ -1252,6 +1315,10 @@ button.active {
 
 .leading-4 {
   line-height: 1rem;
+}
+
+.leading-\[100\%\] {
+  line-height: 100%;
 }
 
 .text-whiteText {
@@ -1577,6 +1644,14 @@ button.active {
 
   .lg\:w-\[650px\] {
     width: 650px;
+  }
+
+  .lg\:w-\[40\%\] {
+    width: 40%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:flex-initial {
