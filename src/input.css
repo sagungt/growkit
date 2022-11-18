@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .hamburger {
+    @apply inline-block cursor-pointer;
+  }
+  .hamburger .bar-1, .hamburger .bar-2, .hamburger .bar-3 {
+    @apply w-6 h-1 bg-whiteText my-1 mx-0 transition-all rounded-full;
+  }
+  .hamburger.active .bar-1 {
+    @apply translate-y-2 -rotate-[60deg];
+  }
+  .hamburger.active .bar-3 {
+    @apply -translate-y-2 rotate-[60deg];
+  }
+  .hamburger.active .bar-1,
+  .hamburger.active .bar-2,
+  .hamburger.active .bar-3 {
+    @apply bg-gradient-to-r from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D];
+  }
+  .btn-primary {
+    @apply px-5 py-[14px] rounded-[10px] bg-gradient-to-tr from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D] font-bold text-whiteText hover:px-7 transition-all;
+  }
+  .btn-secondary {
+    @apply px-[10px] py-[14px] border-none font-bold text-whiteText bg-gradient-to-tr from-[#1D8AF7]/0 via-[#7A8CD6]/0 to-[#F7861D]/0 hover:from-[#1D8AF7] hover:via-[#7A8CD6] hover:to-[#F7861D] transition-all rounded-[10px] hover:px-5;
+  }
+  .outline-gradient {
+    @apply bg-gradient-to-tr from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D] p-[3px];
+  }
+  .gradient-primary {
+    @apply bg-gradient-to-tr from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D];
+  }
+}
