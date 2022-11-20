@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './dist/index.html',
   ],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,

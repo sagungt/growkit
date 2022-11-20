@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 @layer components {
-  #navbar-menu div ul li.active {
+  #navbar-menu div ul li.active,
+  #footer div ul li:hover {
     @apply font-bold bg-clip-text text-transparent transition-all bg-gradient-to-r from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D];
+  }
+  #theme-toggler.active > svg path {
+    @apply fill-dark;
   }
   .hamburger {
     @apply inline-block cursor-pointer;
   }
   .hamburger .bar-1, .hamburger .bar-2, .hamburger .bar-3 {
-    @apply w-6 h-1 bg-whiteText my-1 mx-0 transition-all rounded-full;
+    @apply w-6 h-1 dark:bg-whiteText bg-dark my-1 mx-0 transition-all rounded-full;
   }
   .hamburger.active .bar-1 {
     @apply translate-y-2 -rotate-[60deg];
@@ -35,8 +39,8 @@
   .gradient-primary {
     @apply bg-gradient-to-tr from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D];
   }
-  button.active {
-    @apply bg-dark;
+  #pricing-button button.active {
+    @apply dark:bg-dark bg-slate-100;
   }
   .available {
     @apply before:content-[url('../assets/img/Checkmark.svg')] before:mr-2;
@@ -45,7 +49,7 @@
     @apply before:content-[url('../assets/img/Close.svg')] before:mr-2;
   }
   #faq-accordion > div.active {
-    @apply bg-darkSecondary;
+    @apply dark:bg-darkSecondary bg-slate-300;
   }
   #faq-accordion > div.active img {
     @apply rotate-45;

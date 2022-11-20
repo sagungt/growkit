@@ -16,9 +16,9 @@ hashChange();
   faqAccordionElements.forEach((element) => {
     element.addEventListener('click', function(e) {
       e.stopPropagation();
-      collapseAllAccordion();
-      element.classList.add('active');
-      e.currentTarget.querySelector('.detail').classList.remove('hidden');
+      // collapseAllAccordion(); // if want only to show 1 collapse at time
+      element.classList.toggle('active');
+      e.currentTarget.querySelector('.detail').classList.toggle('hidden');
     }, true);
   });
   // Close all active accordion
@@ -54,8 +54,8 @@ hashChange();
       element.classList.remove('active');
     });
   }
-  function hashChange() {
-    const { hash } = window.location;
+  // Activate nav link based on hash
+  function activateNavLink(hash) {
     removeAllActiveNavLinks();
     const activeLink = {
       '#': () => selector('#navbar-menu div ul li:nth-child(1)').classList.add('active'),
@@ -63,25 +63,53 @@ hashChange();
       '#pricing': () => selector('#navbar-menu div ul li:nth-child(3)').classList.add('active'),
       '#faq': () => selector('#navbar-menu div ul li:nth-child(4)').classList.add('active'),
     }
-    let activate;
-    if (hash === '') {
-      activate = activeLink['#'];
-    } else {
-      activate = activeLink[hash];
-    }
+    const activate = hash === '' ? activeLink['#'] : activeLink[hash];
     activate();
   }
+  function hashChange() {
+    const { hash } = window.location;
+    activateNavLink(hash);
+  }
   window.onhashchange = hashChange;
-  // window.addEventListener('scroll', () => {
-  //   if (!navbarMenu.classList.contains('hidden')) {
-  //     if (window.pageYOffset > 200) {
-  //       navbar.classList.add('backdrop-blur');
-  //       navbar.classList.add('dark:bg-dark/20');
-  //       navbar.classList.remove('dark:bg-dark');
-  //     } else {
-  //       navbar.classList.remove('backdrop-blur');
-  //       navbar.classList.add('dark:bg-dark/20');
-  //       navbar.classList.remove('dark:bg-dark');
-  //     }
-  //   }
-  // })
+  window.addEventListener('scroll', () => {
+    const { scrollY: scroll } = window;
+    if (scroll > 200) {
+      navbar.classList.add('backdrop-blur');
+      navbar.classList.remove('bg-slate-100');
+      navbar.classList.add('bg-transparent');
+    } else {
+      navbar.classList.remove('backdrop-blur');
+      navbar.classList.add('bg-slate-100');
+      navbar.classList.remove('bg-transparent');
+    }
+    const companiesElement = selector('#companies');
+    const reviewElement = selector('#review');
+    const pricingElement = selector('#pricing');
+    if (
+      scroll > 0
+      && scroll < companiesElement.offsetTop + companiesElement.clientHeight
+    ) {
+      activateNavLink('');
+    }
+    if (
+      scroll > companiesElement.offsetTop + companiesElement.clientHeight
+      && scroll < reviewElement.offsetTop + reviewElement.clientHeight
+    ) {
+      activateNavLink('#features');
+    }
+    if (
+      scroll > reviewElement.offsetTop + reviewElement.clientHeight
+      && scroll < pricingElement.offsetTop + pricingElement.clientHeight
+    ) {
+      activateNavLink('#pricing');
+    }
+    if (
+      scroll > pricingElement.offsetTop + pricingElement.clientHeight
+    ) {
+      activateNavLink('#faq');
+    }
+  });
+  document.querySelector('#theme-toggler').addEventListener('click', (e) => {
+    document.body.classList.toggle('dark');
+    e.currentTarget.classList.toggle('active');
+  });
