@@ -12,7 +12,7 @@
   <link href="./styles/style.css" rel="stylesheet">
   <title>GrowKit</title>
 </head>
-<body class="font-poppins dark">
+<body class="font-poppins dark scroll-smooth">
   
   <!-- Navbar Section -->
   <nav id="navbar" class="fixed z-[9999] w-full dark:bg-dark transition-all">
@@ -28,23 +28,23 @@
         <div class="flex items-center justify-center flex-col md:flex-row lg:flex-row md:justify-between gap-y-5">
 
           <ul class="flex items-center justify-center flex-col text-whiteText gap-y-5 md:flex-row lg:flex-row gap-0">
-            <li>
+            <li class="active">
               <a class="px-3 py-[10px]" href="#">Home</a>
             </li>
             <li>
-              <a class="px-3 py-[10px]" href="#">Features</a>
+              <a class="px-3 py-[10px]" href="#features">Features</a>
             </li>
             <li>
-              <a class="px-3 py-[10px]" href="#">Pricing</a>
+              <a class="px-3 py-[10px]" href="#pricing">Pricing</a>
             </li>
             <li>
-              <a class="px-3 py-[10px]" href="#">FAQ</a>
+              <a class="px-3 py-[10px]" href="#faq">FAQ</a>
             </li>
           </ul>
 
           <div class="flex flex-row gap-y-2 gap-x-8 w-full lg:w-auto">
-            <a class="btn-secondary text-center flex-1 md:flex-initial lg:flex-initial">Log In</a>
-            <a class="btn-primary text-center flex-1 md:flex-initial lg:flex-initial">Sign Up</a>
+            <a href="#" class="btn-secondary text-center flex-1 md:flex-initial lg:flex-initial">Log In</a>
+            <a href="#" class="btn-primary text-center flex-1 md:flex-initial lg:flex-initial">Sign Up</a>
           </div>
 
         </div>
@@ -113,8 +113,8 @@
     </div>
   </section>
 
-  <!-- Customers Section -->
-  <section id="customers" class="bg-dark py-[80px]">
+  <!-- Features Section -->
+  <section id="features" class="bg-dark py-[80px]">
     <div class="container flex gap-10">
 
       <div class="flex flex-col w-1/2 gap-y-[58px]">
@@ -423,12 +423,19 @@
 
 </body>
 <script>
-  const navbar = document.querySelector('#navbar');
-  const navbarMenu = document.querySelector('#navbar-menu');
-  const navbarButton = document.querySelector('#navbar-button');
-  const faqAccordionElements = document.querySelectorAll('#faq-accordion div');
-  const faqAccordionDetailElements = document.querySelectorAll('.detail');
-  const pricingButtonElements = document.querySelector('#pricing-button');
+  hashChange();
+  function selector(selectors) {
+    return document.querySelector(selectors);
+  }
+  function selectorAll(selectors) {
+    return document.querySelectorAll(selectors);
+  }
+  const navbar = selector('#navbar');
+  const navbarMenu = selector('#navbar-menu');
+  const navbarButton = selector('#navbar-button');
+  const faqAccordionElements = selectorAll('#faq-accordion div');
+  const faqAccordionDetailElements = selectorAll('.detail');
+  const pricingButtonElements = selector('#pricing-button');
 
   // FAQ accordion event listener
   faqAccordionElements.forEach((element) => {
@@ -448,7 +455,7 @@
       element.classList.add('hidden');
     });
   }
-  // Toggle navbar menu
+  // Toggle navbar menu and hamburger class
   navbarButton.addEventListener('click', () => {
     navbarMenu.classList.toggle('hidden');
     navbarButton.querySelector('.hamburger').classList.toggle('active')
@@ -460,12 +467,36 @@
       element.classList.add('active');
     });
   });
-  // Remove all active button
+  // Remove all active button classes
   function removeActiveButton() {
     pricingButtonElements.querySelectorAll('button').forEach((element) => {
       element.classList.remove('active');
     });
   }
+  // Remove all active nav link classes
+  function removeAllActiveNavLinks() {
+    selectorAll('#navbar-menu div ul li').forEach((element) => {
+      element.classList.remove('active');
+    });
+  }
+  function hashChange() {
+    const { hash } = window.location;
+    removeAllActiveNavLinks();
+    const activeLink = {
+      '#': () => selector('#navbar-menu div ul li:nth-child(1)').classList.add('active'),
+      '#features': () => selector('#navbar-menu div ul li:nth-child(2)').classList.add('active'),
+      '#pricing': () => selector('#navbar-menu div ul li:nth-child(3)').classList.add('active'),
+      '#faq': () => selector('#navbar-menu div ul li:nth-child(4)').classList.add('active'),
+    }
+    let activate;
+    if (hash === '') {
+      activate = activeLink['#'];
+    } else {
+      activate = activeLink[hash];
+    }
+    activate();
+  }
+  window.onhashchange = hashChange;
   // window.addEventListener('scroll', () => {
   //   if (!navbarMenu.classList.contains('hidden')) {
   //     if (window.pageYOffset > 200) {

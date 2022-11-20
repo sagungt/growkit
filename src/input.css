@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  #navbar-menu div ul li.active {
+    @apply font-bold bg-clip-text text-transparent transition-all bg-gradient-to-r from-[#1D8AF7] via-[#7A8CD6] to-[#F7861D];
+  }
   .hamburger {
     @apply inline-block cursor-pointer;
   }
