@@ -1844,6 +1844,10 @@ button.active {
     justify-content: space-between;
   }
 
+  .lg\:rounded-none {
+    border-radius: 0px;
+  }
+
   .lg\:bg-dark {
     --tw-bg-opacity: 1;
     background-color: rgb(27 38 49 / var(--tw-bg-opacity));
