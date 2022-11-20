@@ -1834,6 +1834,10 @@ button.active {
     width: 70%;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:flex-initial {
     flex: 0 1 auto;
   }
