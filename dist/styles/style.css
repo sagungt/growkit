@@ -745,6 +745,14 @@ button.active {
   order: 3;
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
 .mr-\[42px\] {
   margin-right: 42px;
 }
@@ -1588,6 +1596,14 @@ button.active {
 }
 
 @media (min-width: 768px) {
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:order-1 {
+    order: 1;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -1606,6 +1622,10 @@ button.active {
 
   .md\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .md\:w-\[90\%\] {
+    width: 90%;
   }
 
   .md\:flex-initial {
@@ -1691,6 +1711,14 @@ button.active {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-2 {
+    order: 2;
+  }
+
+  .lg\:order-1 {
+    order: 1;
+  }
+
   .lg\:-ml-20 {
     margin-left: -5rem;
   }
@@ -1717,6 +1745,14 @@ button.active {
 
   .lg\:w-\[650px\] {
     width: 650px;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-\[90\%\] {
+    width: 90%;
   }
 
   .lg\:flex-initial {
