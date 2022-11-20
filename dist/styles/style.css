@@ -1706,6 +1706,10 @@ button.active {
          column-gap: 68px;
   }
 
+  .md\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
   .md\:bg-dark {
     --tw-bg-opacity: 1;
     background-color: rgb(27 38 49 / var(--tw-bg-opacity));
