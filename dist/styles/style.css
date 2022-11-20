@@ -1816,6 +1816,10 @@ button.active {
     flex-direction: row;
   }
 
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
