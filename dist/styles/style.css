@@ -1032,6 +1032,12 @@ button.active {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1163,6 +1169,10 @@ button.active {
 
 .p-16 {
   padding: 4rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .py-3 {
@@ -1820,6 +1830,10 @@ button.active {
     width: 66.666667%;
   }
 
+  .lg\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .lg\:flex-initial {
     flex: 0 1 auto;
   }
@@ -1844,6 +1858,12 @@ button.active {
     justify-content: space-between;
   }
 
+  .lg\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:rounded-none {
     border-radius: 0px;
   }
@@ -1855,6 +1875,10 @@ button.active {
 
   .lg\:bg-\[url\(\'\/assets\/img\/hero-image\.png\'\)\] {
     background-image: url('/assets/img/hero-image.png');
+  }
+
+  .lg\:p-16 {
+    padding: 4rem;
   }
 
   .lg\:py-0 {
